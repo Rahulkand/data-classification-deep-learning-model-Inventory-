@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Minds | Register</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-style: normal;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        .user-input{
+            margin-bottom: 10px;
+            width: 250px;
+            border-radius: 15%;
+            height: 22px;
+        }
+        #constraint{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h3>Registration</h3>
+    {% if message %}
+        <p id="constraint">{{message}}</p>
+    {% endif %}
+    <form action="/registration" method="post">
+        <label>username: </label>
+        <input class="user-input username" name="username" type="text">
+        <label>useremail: </label>
+        <input class="user-input useremail" name="useremail" type="email">
+        <label>password: </label>
+        <input class="user-input userpass" name="password" type="password">
+        <button class="user-input user-btn" type="submit">Register</button> 
+        <p>Existing client? <a href="/">Login</a></p>
+    </form>
+</body>
+</html>

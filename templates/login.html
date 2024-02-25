@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Minds | Login</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-style: normal;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        .user-input{
+            margin-bottom: 10px;
+            width: 250px;
+            border-radius: 15%;
+            height: 22px;
+        }
+        #constraint{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Deep Minds: Language Detector and Image Classifier</h1>
+    <h3>Login</h3>
+    {% if message %}
+        <p id="constraint">{{message}}</p>
+    {% endif %}
+    <form action="/logging" method='post'>
+        <label>user email: </label>
+        <input class="user-input useremail" name="useremail" type="email">
+        <label>password: </label>
+        <input class="user-input userpass" name="password" type="password">
+        <button type="submit" class="user-input user-btn">Login</button>
+    </form>
+    <p>New to app? <a href="/register">Register</a></p>
+    
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Mind | Language Detector</title>
+</head>
+<body>
+    <h3>Enter the text in the box below to detect the Language</h3>
+    <form action="/langmodel" method="post">
+        <textarea cols="50" rows="15" name = "text"></textarea><br>
+        <button type="submit">Detect Language</button>
+    </form>
+    {% if result %}
+        <h3>{{result}}</h3>
+    {% endif %}
+    <a href="/profile">Go Back</a>
+</body>
+</html>
